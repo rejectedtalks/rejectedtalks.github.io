@@ -1,0 +1,32 @@
+[
+	{
+		"title": "Apex Testing for Humans",
+		"description": "Apex test development for the rest of us. How to write Apex tests the \"right way,\" and how to test complicated code.",
+		"link": "http://pcon.github.com/presentations/testing/",
+		"user": {
+			"name": "Patrick Connelly",
+			"link": "http://github.com/pcon/"
+		},
+		"tags": [
+			"apex",
+			"code",
+			"salesforce"
+		],
+		"date_added": "2014-10-16"
+	},
+	{
+		"title": "Hands On: Apex Bulk Testing",
+		"description": "Hands on training for bulk testing of Apex triggers.",
+		"link": "https://github.com/pcon/bulkhandson",
+		"user": {
+			"name": "Patrick Connelly",
+			"link": "http://github.com/pcon/"
+		},
+		"tags": [
+			"code",
+			"handson",
+			"salesforce"
+		],
+		"date_added": "2014-10-16"
+	}
+]

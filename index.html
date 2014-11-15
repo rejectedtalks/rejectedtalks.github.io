@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="rejectedApp" ng-controller="RejectedCtrl">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Rejected Talks</title>
+
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<style>
+			#header {
+				margin-bottom: 0px;
+				background-color: #ddd;
+			}
+
+			#search-wrapper {
+				padding: 30px 0px;
+				background-color: #eee;
+				width: 100%;
+				z-index: 2;
+			}
+
+			#search-wrapper.affix {
+				position: fixed;
+				top: 0;
+				width: 100%
+			}
+
+			.talk-bottom {
+				margin-top: 25px;
+			}
+
+			.tag {
+				margin: 0px 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="jumbotron" id="header">
+			<div class="container">
+				<h1>Rejected Talks</h1>
+				<p>Ever had a talk you were really proud of but it got rejected from a conference?</p>
+				<p>This is your chance to let the world know about your talk!  Just follow the link below to learn how to add your talk</p>
+				<p><a class="btn btn-primary btn-lg" role="button" href="https://github.com/rejectedtalks/rejectedtalks.github.io/blob/master/README.md">Learn more &raquo;</a></p>
+			</div>
+		</div>
+		<div id="search-wrapper-wrapper">
+			<div id="search-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<input type="text" class="form-control" placeholder="Broad Search..." ng-model="broadQuery">
+						</div>
+						<div class="col-md-6">
+							<input type="text" class="form-control" placeholder="Tag Search..." ng-model="tagQuery">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container" ng-show="!loading">
+			<div class="container">
+				<div ng-repeat="item in items | filter: search">
+					<div class="col-md-4">
+						<h2>{{ item.title }}</h2>
+						<div class="talk-description">{{ item.description }}</div>
+						<div class="talk-bottom">
+							<p><a class="btn btn-default" href="{{ item.link }}" role="button">View talk &raquo;</a></p>
+							<div>
+								<span class="label label-default tag" ng-repeat="tag in item.tags">{{ tag }}</span> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<hr>
+
+			<footer>
+				<p>Designed and coded by <a href="http://github.com/pcon/">pcon</a> inspired by <a href="http://github.com/fourq/">fourq</a></p>
+			</footer>
+		</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
+		<script src="controller.js"></script>
+	</body>
+</html>
