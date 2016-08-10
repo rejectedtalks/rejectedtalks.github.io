@@ -28,5 +28,23 @@
 			"salesforce"
 		],
 		"date_added": "2014-10-16"
+	},
+	{
+		"title": "Hands On: Enhancing Flows and Processes with Apex",
+		"description": "Hands on training for when and how to use Apex with Process Builder and Flows.",
+		"link": "https://github.com/dancinllama/FlowsAndApexHOT",
+		"user": {
+			"name": "James Loghry",
+			"link": "http://github.com/dancinllama/"
+		},
+		"tags": [
+			"code",
+			"process builder",
+			"flow",
+			"declaritive",
+			"handson",
+			"salesforce"
+		],
+		"date_added": "2016-08-10"
 	}
 ]
